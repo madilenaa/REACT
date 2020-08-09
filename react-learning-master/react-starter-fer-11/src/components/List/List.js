@@ -12,6 +12,12 @@ class List extends React.Component {
     columns: this.props.columns || [],
   }
 
+  static propTypes = {
+    title: PropTypes.node.isRequired,
+    description: PropTypes.node,
+    columns: PropTypes.array,
+  }
+
   static defaultProps = {
     description: settings.defaultListDescription,
   }
@@ -35,13 +41,12 @@ class List extends React.Component {
     return (
       <section className={styles.component}>
         <Hero titleText={this.props.title} image={this.props.image} />
-        <div className={styles.description}>
-          {this.props.description}
+        <div className={styles.description}>{ReactHtmlParser(this.props.description)}
         </div>
         <div className={styles.columns}>
-        {this.state.columns.map(({key, ...columnProps}) => (
-          <Column key={key} {...columnProps} />
-        ))}
+          {this.state.columns.map(({key, ...columnProps}) => (
+            <Column key={key} {...columnProps} />
+          ))}
         </div>
         <div className={styles.creator}>
           <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
