@@ -12,6 +12,20 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  headerLogoIcon: 'clipboard-list',
+};
+
+export const infoContents = {
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  title: 'Info',
+  text: 'Information',
+
+};
+
+export const faqContents = {
+  image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  title: 'FAQ',
+  text: 'Frequently Asked Questions',
 };
 
 export const pageContents = {
