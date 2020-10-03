@@ -9,6 +9,9 @@
     "lint": "eslint src/",
     "server": "http-server dist"
   },
+  "engines": {
+    "node": "12.16.x"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -28,6 +31,7 @@
     "react-html-parser": "^2.0.2",
     "react-redux": "^7.0.1",
     "react-router-dom": "^5.2.0",
+    "react-router-transition": "^1.4.0",
     "redux": "^4.0.1",
     "shortid": "^2.2.15"
   },
